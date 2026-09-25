@@ -1,0 +1,6 @@
+{
+  "name": "Cindevra — Sovereign Entheogen OS",
+  "description": "Cindevra: The sovereign operating system for clinical entheogen therapies, neuro-regeneration protocols, and patient-first consciousness health.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0A0D0B;
+    color: #E8EDEA;
+  }
+  
+  h1, h2, h3, .font-display, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar styling for Natural Tones botanical aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 13, 11, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 198, 159, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 198, 159, 0.45);
+}
+
+/* Botanical Accent Glow Effects */
+.glow-sage, .glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(168, 198, 159, 0.25);
+}
+
+.glow-earth, .glow-amber {
+  box-shadow: 0 0 25px -5px rgba(200, 177, 149, 0.22);
+}
+
+.glow-clay {
+  box-shadow: 0 0 25px -5px rgba(212, 163, 115, 0.22);
+}
+
+.glow-cyan, .glow-teal {
+  box-shadow: 0 0 25px -5px rgba(147, 197, 181, 0.22);
+}
+
+/* Natural atmospheric backgrounds */
+.bg-natural-radial {
+  background: radial-gradient(circle at 50% -20%, #1A261F 0%, #0A0D0B 80%);
+}
+
+.bg-natural-surface {
+  background: rgba(19, 27, 21, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.border-natural {
+  border-color: rgba(232, 237, 234, 0.08);
+}
+
+.border-natural-sage {
+  border-color: rgba(168, 198, 159, 0.25);
+}
