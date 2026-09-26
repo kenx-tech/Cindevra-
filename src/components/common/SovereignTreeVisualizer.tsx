@@ -331,13 +331,13 @@ export const SovereignTreeVisualizer: React.FC = () => {
             </div>
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#1A261F] border border-[#CCA876]/30 text-[#CCA876] text-xs font-mono">
-                <Layers className="w-3.5 h-3.5" /> Cindevra Sovereign Architecture Matrix
+                <Layers className="w-3.5 h-3.5" /> The Sovereign Platform for Psychedelic-Assisted Care
               </div>
               <h1 className="text-2xl sm:text-3xl font-serif font-bold text-[#E8EDEA] tracking-tight">
                 The Living Technological Root System
               </h1>
               <p className="text-sm text-[#E8EDEA]/70 leading-relaxed font-light">
-                Explore the five foundational layers of Cindevra: from the mathematical zero-knowledge privacy roots to the interconnected mycorrhizal research network. Click any node to interact with that live module.
+                Built for licensed psilocybin service centers, facilitators, and ketamine clinics. Explore the five foundational layers of Cindevra: from mathematical zero-knowledge privacy roots to state-mandated custody logs and interconnected research networks. Click any node to interact with that live module.
               </p>
             </div>
           </div>

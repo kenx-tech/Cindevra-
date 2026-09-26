@@ -62,7 +62,7 @@ const CindevraContent: React.FC = () => {
               <span className="font-serif font-semibold text-lg text-[#E8EDEA]">Cindevra</span>
               <span className="font-mono text-[11px] text-[#E8EDEA]/30">|</span>
               <span className="font-mono text-[11px] text-[#A8C69F]">
-                Sovereign Operating System for Entheogen Therapies
+                The Sovereign Platform for Psychedelic-Assisted Care
               </span>
             </div>
 
@@ -90,7 +90,7 @@ const CindevraContent: React.FC = () => {
                 className="text-[#E8EDEA]/60 hover:text-[#A8C69F] font-mono text-[11px] flex items-center gap-1.5 transition-colors px-2 py-1 rounded-lg hover:bg-[#141B16]"
               >
                 <ScrollText className="w-3.5 h-3.5 text-[#A8C69F]" />
-                <span>Read Sacred Charter</span>
+                <span>Platform Guide & Charter</span>
               </button>
             </div>
 

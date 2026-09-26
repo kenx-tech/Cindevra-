@@ -55,8 +55,8 @@ export const Header: React.FC = () => {
                   Sovereign Kernel v4.2
                 </span>
               </div>
-              <p className="text-[11px] text-[#E8EDEA]/50 hidden sm:block font-light">
-                Clinical Entheogen & Neuro-Regeneration Operating System
+              <p className="text-[11px] text-[#E8EDEA]/60 hidden sm:block font-light">
+                The Sovereign Platform for Psychedelic-Assisted Care
               </p>
             </div>
           </div>
@@ -77,10 +77,10 @@ export const Header: React.FC = () => {
               id="manifesto-btn"
               onClick={() => setShowManifesto(true)}
               className="flex items-center gap-1.5 text-xs text-[#A8C69F] hover:text-[#E8EDEA] px-3 py-1.5 rounded-xl border border-[#A8C69F]/30 hover:border-[#A8C69F] bg-[#141B16] transition-all"
-              title="Read Sacred Mission Statement"
+              title="Read Platform Summary & Constitutional Charter"
             >
               <ScrollText className="w-3.5 h-3.5 text-[#A8C69F]" />
-              <span className="font-medium hidden sm:inline">Mission & Principles</span>
+              <span className="font-medium hidden sm:inline">Platform Guide & Charter</span>
             </button>
           </div>
         </div>

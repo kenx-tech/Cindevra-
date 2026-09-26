@@ -743,6 +743,39 @@ export const BranchLayer: React.FC = () => {
             </div>
           </div>
 
+          {/* Substance Vault Regulatory Scope */}
+          <div className="p-4 rounded-xl bg-[#141B16] border border-[#93C5B5]/30 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div className="space-y-1 border-b md:border-b-0 md:border-r border-white/[0.08] pb-3 md:pb-0 md:pr-4">
+              <div className="font-semibold text-[#A8C69F] font-mono text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#A8C69F]" />
+                <span>Psilocybin (OR / CO Licensed)</span>
+              </div>
+              <p className="text-[#E8EDEA]/75 text-[11px] leading-relaxed">
+                Tracks lot numbers, dosage, and two-person witness sign-offs to meet Oregon Psilocybin Services (OPS) and Colorado NMHA custody requirements.
+              </p>
+            </div>
+
+            <div className="space-y-1 border-b md:border-b-0 md:border-r border-white/[0.08] pb-3 md:pb-0 md:pr-4">
+              <div className="font-semibold text-[#93C5B5] font-mono text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#93C5B5]" />
+                <span>Ketamine (Medical Clinics)</span>
+              </div>
+              <p className="text-[#E8EDEA]/75 text-[11px] leading-relaxed">
+                Milligram-accurate dispensing, perpetual dual-witness counts, and chain-of-custody logs to DEA Schedule III standards.
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <div className="font-semibold text-[#C8B195] font-mono text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+                <Scale className="w-3.5 h-3.5 text-[#C8B195]" />
+                <span>MDMA (Architecture Ready)</span>
+              </div>
+              <p className="text-[#E8EDEA]/75 text-[11px] leading-relaxed">
+                Architecture in place to support MDMA-assisted protocols as federal pathways open; not currently a legal pathway outside clinical trials.
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
             {/* DEA Perpetual Inventory Records Table */}
@@ -935,7 +968,7 @@ export const BranchLayer: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xs text-[#E8EDEA]/60 font-sans">
-                Automated generation of out-of-network claims utilizing time-based coding: 0820T (Lead QHP), +0821T (Secondary Co-Therapist), and +0822T (Clinical Escort).
+                Out-of-network claims, cash-pay bundle invoicing, and optional AMA CPT Category III tracking (0820T, +0821T, +0822T).
               </p>
             </div>
 
@@ -946,6 +979,21 @@ export const BranchLayer: React.FC = () => {
               <Receipt className="w-4 h-4" />
               <span>Generate / Refresh Superbill</span>
             </button>
+          </div>
+
+          {/* Handles Payment, Honestly Banner */}
+          <div className="p-4 rounded-xl bg-[#141B16] border border-[#CCA876]/40 flex items-start gap-3 text-xs">
+            <div className="p-2 rounded-lg bg-[#CCA876]/10 text-[#CCA876] shrink-0 mt-0.5">
+              <DollarSign className="w-4 h-4" />
+            </div>
+            <div className="space-y-1">
+              <div className="font-semibold text-[#CCA876] font-mono text-[11px] uppercase tracking-wider">
+                Payment Transparency & Reality
+              </div>
+              <p className="text-[#E8EDEA]/80 leading-relaxed font-sans">
+                Most psilocybin sessions are <strong>cash-pay</strong> (no insurance reimbursement exists yet, since nothing in this category is FDA-approved). Ketamine sessions, administered under a medical framework, may be billable depending on the clinic's setup. Cindevra tracks either model without assuming one-size-fits-all billing.
+              </p>
+            </div>
           </div>
 
           {currentPatient.billingProfile ? (
