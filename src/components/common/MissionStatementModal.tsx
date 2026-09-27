@@ -59,7 +59,7 @@ export const MissionStatementModal: React.FC = () => {
           <button
             id="close-manifesto-btn"
             onClick={() => setShowManifesto(false)}
-            className="p-2 text-[#E8EDEA]/50 hover:text-[#E8EDEA] rounded-xl bg-[#141B16] border border-[#E8EDEA]/10 hover:border-[#CCA876]/40 transition-all"
+            className="p-2 text-[#E8EDEA]/80 hover:text-[#E8EDEA] rounded-xl bg-[#141B16] border border-[#E8EDEA]/20 hover:border-[#CCA876]/40 transition-all focus-visible:ring-2 focus-visible:ring-[#CCA876]"
             aria-label="Close Platform Guide"
           >
             <X className="w-5 h-5" />
@@ -70,10 +70,10 @@ export const MissionStatementModal: React.FC = () => {
         <div className="flex items-center gap-2 px-6 pt-3 pb-2 border-b border-white/[0.08] bg-[#0A0D0B]">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium font-mono transition-all flex items-center gap-2 ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium font-mono transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-[#A8C69F] ${
               activeTab === 'overview'
                 ? 'bg-[#1A261F] text-[#A8C69F] border border-[#A8C69F]/40'
-                : 'text-[#E8EDEA]/60 hover:text-[#E8EDEA] hover:bg-[#141B16]'
+                : 'text-[#E8EDEA]/75 hover:text-[#E8EDEA] hover:bg-[#141B16]'
             }`}
           >
             <Compass className="w-3.5 h-3.5" />
@@ -82,10 +82,10 @@ export const MissionStatementModal: React.FC = () => {
 
           <button
             onClick={() => setActiveTab('axioms')}
-            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium font-mono transition-all flex items-center gap-2 ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium font-mono transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-[#CCA876] ${
               activeTab === 'axioms'
                 ? 'bg-[#1A261F] text-[#CCA876] border border-[#CCA876]/40'
-                : 'text-[#E8EDEA]/60 hover:text-[#E8EDEA] hover:bg-[#141B16]'
+                : 'text-[#E8EDEA]/75 hover:text-[#E8EDEA] hover:bg-[#141B16]'
             }`}
           >
             <Shield className="w-3.5 h-3.5" />
@@ -291,7 +291,7 @@ export const MissionStatementModal: React.FC = () => {
                         01
                       </div>
                       <h4 className="text-sm font-semibold text-[#E8EDEA] mb-1.5 font-sans">Sovereignty of Journey</h4>
-                      <p className="text-xs text-[#E8EDEA]/60 leading-normal">
+                      <p className="text-xs text-[#E8EDEA]/80 leading-normal">
                         The human journey remains sovereign. No state, corporation, or AI may expropriate, commercialize, or weaponize the inner landscape of the participant.
                       </p>
                     </div>
@@ -306,7 +306,7 @@ export const MissionStatementModal: React.FC = () => {
                         02
                       </div>
                       <h4 className="text-sm font-semibold text-[#E8EDEA] mb-1.5 font-sans">Clinical Rigor</h4>
-                      <p className="text-xs text-[#E8EDEA]/60 leading-normal">
+                      <p className="text-xs text-[#E8EDEA]/80 leading-normal">
                         The clinical process remains rigorous and evidence-evolving. Protocols adapt dynamically to biomarker telemetry, harm-reduction science, and peer-reviewed safety data.
                       </p>
                     </div>
@@ -321,7 +321,7 @@ export const MissionStatementModal: React.FC = () => {
                         03
                       </div>
                       <h4 className="text-sm font-semibold text-[#E8EDEA] mb-1.5 font-sans">Humble Servant</h4>
-                      <p className="text-xs text-[#E8EDEA]/60 leading-normal">
+                      <p className="text-xs text-[#E8EDEA]/80 leading-normal">
                         The technology remains a humble servant of awakening, never its master. Algorithmic telemetry assists facilitators but never supersedes human presence and reverent holding.
                       </p>
                     </div>

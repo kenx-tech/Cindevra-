@@ -717,9 +717,9 @@ export const BranchLayer: React.FC = () => {
           {/* Top Vault Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="p-5 rounded-2xl bg-[#141B16] border border-[#93C5B5]/30 space-y-1">
-              <div className="text-xs font-mono text-[#93C5B5]">Perpetual DEA Schedule Lots</div>
+              <div className="text-xs font-mono text-[#93C5B5]">State & Controlled Lots</div>
               <div className="text-2xl font-serif font-bold text-[#E8EDEA]">{deaVaultRecords.length} Active Lots</div>
-              <div className="text-[10px] font-mono text-[#A8C69F]">Form 222 Certified</div>
+              <div className="text-[10px] font-mono text-[#A8C69F]">State CTS & DEA Verified</div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#141B16] border border-[#A8C69F]/30 space-y-1">
@@ -730,12 +730,12 @@ export const BranchLayer: React.FC = () => {
 
             <div className="p-5 rounded-2xl bg-[#141B16] border border-[#C8B195]/30 space-y-1">
               <div className="text-xs font-mono text-[#C8B195]">Vault Dual-Custodians</div>
-              <div className="text-base font-bold text-[#E8EDEA] truncate">Dr. Mercer / Dr. Vance</div>
-              <div className="text-[10px] font-mono text-[#E8EDEA]/60">Biometric 2FA Required</div>
+              <div className="text-base font-bold text-[#E8EDEA] truncate">S. Chen / M. Thorne</div>
+              <div className="text-[10px] font-mono text-[#E8EDEA]/70">Biometric 2FA Required</div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#141B16] border border-[#D4B8E5]/30 space-y-1">
-              <div className="text-xs font-mono text-[#D4B8E5]">Form 41 Waste Logs</div>
+              <div className="text-xs font-mono text-[#D4B8E5]">Regulated Waste Logs</div>
               <div className="text-2xl font-serif font-bold text-[#E8EDEA]">
                 {deaVaultRecords.reduce((acc, r) => acc + r.wasteLog.length, 0)} Logged Events
               </div>
@@ -786,17 +786,17 @@ export const BranchLayer: React.FC = () => {
                     <Boxes className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-serif font-bold text-base text-[#E8EDEA]">Perpetual DEA Controlled Vault Ledger</h3>
-                    <p className="text-xs text-[#E8EDEA]/50 font-mono">Form 222 Electronic Ingestion & Physical Verification</p>
+                    <h3 className="font-serif font-bold text-base text-[#E8EDEA]">Substance Vault & Perpetual Custody Ledger</h3>
+                    <p className="text-xs text-[#E8EDEA]/70 font-mono">State Chain-of-Custody Manifests & DEA Schedule III Physical Counts</p>
                   </div>
                 </div>
 
                 <button
                   onClick={() => setShowWasteModal(true)}
-                  className="px-3 py-1.5 rounded-xl bg-[#0D120E] hover:bg-[#1A261F] border border-[#E8EDEA]/10 text-xs text-[#C8B195] font-mono flex items-center gap-1.5"
+                  className="px-3 py-1.5 rounded-xl bg-[#0D120E] hover:bg-[#1A261F] border border-[#CCA876]/40 text-xs text-[#CCA876] font-mono flex items-center gap-1.5"
                 >
                   <Flame className="w-3.5 h-3.5" />
-                  <span>Log Form 41 Waste</span>
+                  <span>Log Regulated Waste</span>
                 </button>
               </div>
 
@@ -1073,7 +1073,7 @@ export const BranchLayer: React.FC = () => {
 
                 {/* Total Claim Calculation */}
                 <div className="pt-4 border-t border-[#E8EDEA]/10 flex items-center justify-between font-mono">
-                  <div className="text-xs text-[#E8EDEA]/60">Total Insurance Superbill Claim Amount:</div>
+                  <div className="text-xs text-[#E8EDEA]/80 font-medium">Total Out-of-Network Superbill / Itemized Claim:</div>
                   <div className="text-xl font-bold text-[#A8C69F]">
                     ${(currentPatient.billingProfile.primaryQHP.totalBilled + (currentPatient.billingProfile.secondaryQHP?.totalBilled || 0) + (currentPatient.billingProfile.clinicalStaff?.totalBilled || 0)).toLocaleString()}
                   </div>

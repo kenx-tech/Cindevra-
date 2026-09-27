@@ -92,21 +92,22 @@ export const Header: React.FC = () => {
           <button
             id="live-journey-pill"
             onClick={() => setActiveLayer('live-journey')}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#141B16] border border-[#E8EDEA]/10 hover:border-[#A8C69F]/50 text-xs transition-all group"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#141B16] border border-[#A8C69F]/30 hover:border-[#A8C69F] text-xs transition-all group focus-visible:ring-2 focus-visible:ring-[#A8C69F]"
+            aria-label="Active Journey Telemetry Monitor: AE-9941"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A8C69F] opacity-75"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A8C69F] opacity-80"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#A8C69F]"></span>
             </span>
-            <span className="text-[#E8EDEA]/80 group-hover:text-[#A8C69F] font-mono text-[11px]">
-              Active Journey: <strong className="text-[#E8EDEA] font-medium">AE-9941</strong> (HR {liveTelemetry.heartRate} bpm)
+            <span className="text-[#E8EDEA] group-hover:text-[#A8C69F] font-mono text-xs">
+              Active: <strong className="text-[#A8C69F] font-semibold">AE-9941</strong> (HR {liveTelemetry.heartRate} bpm)
             </span>
             <Activity className="w-3.5 h-3.5 text-[#A8C69F] ml-0.5" />
           </button>
 
           {/* Jurisdiction Selector */}
-          <div className="flex items-center gap-1.5 bg-[#141B16] border border-[#E8EDEA]/10 rounded-xl px-2.5 py-1 text-xs">
-            <Building2 className="w-3.5 h-3.5 text-[#E8EDEA]/50" />
+          <div className="flex items-center gap-1.5 bg-[#141B16] border border-white/20 rounded-xl px-2.5 py-1 text-xs">
+            <Building2 className="w-3.5 h-3.5 text-[#A8C69F]" />
             <select
               id="jurisdiction-select"
               aria-label="Select legal jurisdiction"
@@ -115,7 +116,7 @@ export const Header: React.FC = () => {
                 const found = jurisdictions.find(j => j.id === e.target.value);
                 if (found) setActiveJurisdiction(found);
               }}
-              className="bg-transparent text-[#E8EDEA]/90 text-xs focus:outline-none cursor-pointer pr-1 font-mono"
+              className="bg-transparent text-[#E8EDEA] text-xs focus:outline-none cursor-pointer pr-1 font-mono font-medium"
             >
               {jurisdictions.map(j => (
                 <option key={j.id} value={j.id} className="bg-[#0A0D0B] text-[#E8EDEA]">
@@ -129,37 +130,41 @@ export const Header: React.FC = () => {
           <button
             id="ambient-sound-toggle"
             onClick={toggleAmbientAudio}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs border transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium border transition-all focus-visible:ring-2 focus-visible:ring-[#A8C69F] ${
               ambientAudioActive 
-                ? 'bg-[#1A261F] border-[#A8C69F]/50 text-[#A8C69F] glow-sage' 
-                : 'bg-[#141B16] border-[#E8EDEA]/10 text-[#E8EDEA]/50 hover:text-[#E8EDEA]'
+                ? 'bg-[#1A261F] border-[#A8C69F] text-[#A8C69F] shadow-sm' 
+                : 'bg-[#141B16] border-white/20 text-[#E8EDEA] hover:text-[#A8C69F] hover:border-[#A8C69F]/50'
             }`}
             title="Toggle 432Hz Grounding Synthesizer + Theta Harmonic"
+            aria-label="Toggle 432Hz Grounding Synthesizer"
+            aria-pressed={ambientAudioActive}
           >
-            {ambientAudioActive ? <Volume2 className="w-3.5 h-3.5 text-[#A8C69F]" /> : <VolumeX className="w-3.5 h-3.5" />}
-            <span className="font-mono text-[11px] hidden sm:inline">{ambientAudioActive ? '432Hz Tone Active' : 'Sound Off'}</span>
+            {ambientAudioActive ? <Volume2 className="w-3.5 h-3.5 text-[#A8C69F]" /> : <VolumeX className="w-3.5 h-3.5 text-[#E8EDEA]/70" />}
+            <span className="hidden sm:inline">{ambientAudioActive ? '432Hz Sound Active' : 'Sound Muted'}</span>
           </button>
 
           {/* Sovereign Emergency Lockdown */}
           <button
             id="emergency-lockdown-toggle"
             onClick={toggleEmergencyLockdown}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium border transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-semibold border transition-all focus-visible:ring-2 focus-visible:ring-rose-400 ${
               emergencyLockdown
-                ? 'bg-[#2B1515] border-rose-500/70 text-rose-200 shadow-lg animate-pulse'
-                : 'bg-[#141B16] border-[#E8EDEA]/10 text-[#E8EDEA]/60 hover:text-[#E8EDEA] hover:border-[#E8EDEA]/20'
+                ? 'bg-[#2B1515] border-rose-500 text-rose-100 shadow-lg animate-pulse'
+                : 'bg-[#131B15] border-[#A8C69F]/50 text-[#E8EDEA] hover:border-[#A8C69F] hover:bg-[#18231c]'
             }`}
             title="Toggle Zero-Trust Emergency Sovereign Sanctuary Isolation"
+            aria-label={`Sovereign Vault Isolation status: ${emergencyLockdown ? 'Vault Isolated' : 'Vault Secure'}. Click to toggle.`}
+            aria-pressed={emergencyLockdown}
           >
             {emergencyLockdown ? (
               <>
-                <Lock className="w-3.5 h-3.5 text-rose-400" />
-                <span className="font-mono text-[11px]">Vault Isolated</span>
+                <Lock className="w-4 h-4 text-rose-300" />
+                <span className="tracking-wide text-rose-100">Vault Isolated</span>
               </>
             ) : (
               <>
-                <Unlock className="w-3.5 h-3.5 text-[#A8C69F]" />
-                <span className="font-mono text-[11px]">Vault Secure</span>
+                <Unlock className="w-4 h-4 text-[#A8C69F]" />
+                <span className="tracking-wide text-[#E8EDEA]">Vault Secure</span>
               </>
             )}
           </button>

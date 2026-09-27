@@ -148,7 +148,7 @@ const TREE_DATA: TreeNode[] = [
     title: 'Branch Layer — Clinic Operations',
     layerId: 'branch',
     submoduleId: 'all',
-    description: 'Patient Journey Orchestration, Facilitator & Clinician Workbench, Sanctuary Scheduling, and Schedule I/II GMP Inventory Vault.',
+    description: 'Patient Journey Orchestration, Facilitator & Clinician Workbench, Sanctuary Scheduling, and State-Mandated & Controlled Substance Vault.',
     status: 'Operational',
     metrics: '4 Active Cohorts • 3 Dispensary Vaults • 2 Chaperone Locks',
     children: [

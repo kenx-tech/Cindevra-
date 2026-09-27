@@ -510,8 +510,8 @@ export const RootLayer: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-xs text-[#E8EDEA]/60 font-sans">
-                  As federal scheduling transitions occur, Cindevra dynamically adapts compliance telemetry, physician sign-off requirements, and dispensing logs without requiring clinical workflow overhauls.
+                <p className="text-xs text-[#E8EDEA]/80 font-sans leading-relaxed">
+                  As federal and state scheduling transitions occur, Cindevra dynamically adapts compliance telemetry, facilitator and clinician sign-off requirements, and dispensing logs without requiring operational overhauls.
                 </p>
               </div>
 

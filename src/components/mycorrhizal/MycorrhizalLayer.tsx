@@ -260,7 +260,7 @@ export const MycorrhizalLayer: React.FC = () => {
                 Automated Risk Evaluation & Mitigation Strategy (REMS)
               </h2>
               <p className="text-xs sm:text-sm text-[#E8EDEA]/70 font-light font-sans">
-                Generates cryptographically sealed adverse event filings, two-physician sign-offs, and state licensing authority quarterly dossiers with one click.
+                Generates cryptographically sealed adverse event filings, dual-facilitator/clinician sign-offs, and state licensing authority quarterly dossiers with one click.
               </p>
             </div>
 

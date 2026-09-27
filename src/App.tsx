@@ -54,32 +54,32 @@ const CindevraContent: React.FC = () => {
       <CreatorBioModal />
 
       {/* Sovereign Footer */}
-      <footer className="border-t border-white/[0.06] bg-[#070908] px-4 lg:px-8 py-7 text-xs text-[#E8EDEA]/60">
+      <footer className="border-t border-white/10 bg-[#070908] px-4 lg:px-8 py-7 text-xs text-[#E8EDEA]/80">
         <div className="max-w-7xl mx-auto space-y-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             
             <div className="flex items-center gap-3">
               <span className="font-serif font-semibold text-lg text-[#E8EDEA]">Cindevra</span>
-              <span className="font-mono text-[11px] text-[#E8EDEA]/30">|</span>
-              <span className="font-mono text-[11px] text-[#A8C69F]">
+              <span className="font-mono text-xs text-white/30">|</span>
+              <span className="font-mono text-xs text-[#A8C69F] font-medium">
                 The Sovereign Platform for Psychedelic-Assisted Care
               </span>
             </div>
 
             {/* Three Non-Negotiable Reminders */}
-            <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] font-mono text-[#E8EDEA]/70">
-              <span className="text-[#A8C69F]">1. Sovereign Human Journey</span>
-              <span className="text-[#E8EDEA]/30">•</span>
-              <span className="text-[#C8B195]">2. Rigorous Clinical Evidence</span>
-              <span className="text-[#E8EDEA]/30">•</span>
-              <span className="text-[#A8C69F]">3. Humble Servant of Awakening</span>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-[#E8EDEA]/90">
+              <span className="text-[#A8C69F] font-medium">1. Sovereign Human Journey</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#C8B195] font-medium">2. Rigorous Clinical Evidence</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#A8C69F] font-medium">3. Humble Servant of Awakening</span>
             </div>
 
             <div className="flex items-center gap-3">
               <button
                 id="footer-bio-btn"
                 onClick={() => setShowCreatorBio(true)}
-                className="text-[#CCA876] hover:text-[#E8EDEA] font-mono text-[11px] flex items-center gap-1.5 transition-colors px-2 py-1 rounded-lg hover:bg-[#141B16]"
+                className="text-[#CCA876] hover:text-[#E8EDEA] font-mono text-xs flex items-center gap-1.5 transition-colors px-2.5 py-1 rounded-lg hover:bg-[#141B16] border border-[#CCA876]/30 hover:border-[#CCA876]"
               >
                 <Flame className="w-3.5 h-3.5 text-[#CCA876]" />
                 <span>Kenneth Cripps Bio</span>
@@ -87,7 +87,7 @@ const CindevraContent: React.FC = () => {
 
               <button
                 onClick={() => setShowManifesto(true)}
-                className="text-[#E8EDEA]/60 hover:text-[#A8C69F] font-mono text-[11px] flex items-center gap-1.5 transition-colors px-2 py-1 rounded-lg hover:bg-[#141B16]"
+                className="text-[#A8C69F] hover:text-[#E8EDEA] font-mono text-xs flex items-center gap-1.5 transition-colors px-2.5 py-1 rounded-lg hover:bg-[#141B16] border border-[#A8C69F]/30 hover:border-[#A8C69F]"
               >
                 <ScrollText className="w-3.5 h-3.5 text-[#A8C69F]" />
                 <span>Platform Guide & Charter</span>
@@ -97,7 +97,7 @@ const CindevraContent: React.FC = () => {
           </div>
 
           {/* Creator Attribution & Axiom Bar */}
-          <div className="pt-4 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] font-mono text-[#E8EDEA]/50">
+          <div className="pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs font-mono text-[#E8EDEA]/75">
             <div className="flex flex-wrap items-center gap-2 text-center md:text-left">
               <span>Creator & Architect:</span>
               <button 
@@ -106,28 +106,28 @@ const CindevraContent: React.FC = () => {
               >
                 Kenneth Cripps
               </button>
-              <span className="text-white/20">•</span>
-              <span className="text-[#E8EDEA]/60">Guardian Oracle & Q-Mesh Architecture</span>
-              <span className="text-white/20">•</span>
-              <span className="text-[#A8C69F]/80">"State remains sovereign."</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#E8EDEA]/85">Guardian Oracle & Q-Mesh Architecture</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#A8C69F] font-medium">"State remains sovereign."</span>
             </div>
 
             <div className="flex items-center gap-4">
               <a
                 href="mailto:Kenx@guardianoracle.com"
-                className="hover:text-[#CCA876] transition-colors flex items-center gap-1"
+                className="text-[#E8EDEA]/90 hover:text-[#CCA876] transition-colors flex items-center gap-1.5"
               >
-                <Mail className="w-3 h-3 text-[#CCA876]" />
+                <Mail className="w-3.5 h-3.5 text-[#CCA876]" />
                 <span>Kenx@guardianoracle.com</span>
               </a>
               <a
                 href="https://guardianoracle.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#CCA876] transition-colors flex items-center gap-1"
+                className="text-[#E8EDEA]/90 hover:text-[#CCA876] transition-colors flex items-center gap-1.5"
               >
                 <span>guardianoracle.com</span>
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3.5 h-3.5 text-[#CCA876]" />
               </a>
             </div>
           </div>

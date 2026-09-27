@@ -13,17 +13,17 @@ import {
 
 export const INITIAL_DEA_VAULT_RECORDS: DEAVaultRecord[] = [
   {
-    lotNumber: 'GMP-PSI-2026-04A',
-    compound: 'Synthetic Psilocybin (GMP API)',
-    deaSchedule: 'Schedule I',
-    form222TrackingNumber: 'DEA-222-OR-2026-9941A',
+    lotNumber: 'OPS-PSI-2026-04A',
+    compound: 'Cultivated Psilocybin (Standardized Whole Mushroom Extract)',
+    deaSchedule: 'Oregon OPS Licensed',
+    form222TrackingNumber: 'OPS-CTS-OR-2026-9941A (State Transfer Manifest)',
     physicalVaultBalanceMg: 3875,
     electronicOrderBalanceMg: 3875,
     discrepancyDeltaMg: 0,
     lastReconciliationDate: '2026-09-01 07:45:00',
-    custodianQHP1: 'Dr. Julian Mercer, MD (DEA #AM8842109)',
-    custodianWitnessQHP2: 'Dr. Elena Vance, PsyD',
-    storageVaultId: 'VAULT-ALPHA-SAFE-01 (Biometric + Dual-Key)',
+    custodianQHP1: 'Sarah Chen, LCSW (OPS License #LF-8842)',
+    custodianWitnessQHP2: 'Marcus Thorne, LPC (OPS License #LF-9921)',
+    storageVaultId: 'OPS-VAULT-SAFE-01 (Biometric + Dual-Key)',
     twoFactorSigned: true,
     wasteLog: [
       {
@@ -31,21 +31,21 @@ export const INITIAL_DEA_VAULT_RECORDS: DEAVaultRecord[] = [
         wastedMg: 2,
         reason: 'Capsule residue during analytical weight verification',
         disposalMethod: 'Chemical neutralization',
-        witness1: 'Dr. Julian Mercer',
-        witness2: 'Sarah Chen, LCSW'
+        witness1: 'Sarah Chen, LCSW',
+        witness2: 'Marcus Thorne, LPC'
       }
     ]
   },
   {
-    lotNumber: 'GMP-MDMA-2026-09C',
-    compound: 'MDMA Hydrochloride (GMP Pharmaceutical Grade)',
+    lotNumber: 'IND-MDMA-2026-09C',
+    compound: 'MDMA Hydrochloride (FDA IND Investigational Protocol)',
     deaSchedule: 'Schedule I',
-    form222TrackingNumber: 'DEA-222-FED-2026-1184C',
+    form222TrackingNumber: 'DEA-222-FED-2026-1184C (FDA IND Exemption)',
     physicalVaultBalanceMg: 8240,
     electronicOrderBalanceMg: 8240,
     discrepancyDeltaMg: 0,
     lastReconciliationDate: '2026-08-18 08:15:00',
-    custodianQHP1: 'Dr. Julian Mercer, MD',
+    custodianQHP1: 'Dr. Julian Mercer, MD (Clinical Trial Investigator)',
     custodianWitnessQHP2: 'Sarah Chen, LCSW',
     storageVaultId: 'VAULT-ALPHA-SAFE-02 (Climate Controlled)',
     twoFactorSigned: true,
@@ -55,12 +55,12 @@ export const INITIAL_DEA_VAULT_RECORDS: DEAVaultRecord[] = [
     lotNumber: 'KET-USP-2026-88',
     compound: 'Ketamine HCl Injection (50mg/mL USP)',
     deaSchedule: 'Schedule III',
-    form222TrackingNumber: 'DEA-INVOICE-OR-7729',
+    form222TrackingNumber: 'DEA-INVOICE-OR-7729 (DEA Schedule III Order)',
     physicalVaultBalanceMg: 4500,
     electronicOrderBalanceMg: 4500,
     discrepancyDeltaMg: 0,
     lastReconciliationDate: '2026-08-30 18:00:00',
-    custodianQHP1: 'Dr. Maya Lin, MD',
+    custodianQHP1: 'Dr. Maya Lin, MD (DEA Registration #AL991204)',
     custodianWitnessQHP2: 'Marcus Thorne, LPC',
     storageVaultId: 'VAULT-BETA-SECURE-03',
     twoFactorSigned: true,
@@ -92,7 +92,7 @@ export const INITIAL_PART2_CONSENTS: Part2ConsentRule[] = [
   },
   {
     id: 'P2-CONSENT-002',
-    permittedRecipient: 'Availity Insurance Clearinghouse (Out-of-Network Superbill Processing)',
+    permittedRecipient: 'Availity Clearinghouse (Out-of-Network Superbill Processing)',
     organizationType: 'Clearinghouse / Billing',
     purposeOfUse: 'Direct claim submission for CPT Category III (0820T/0821T)',
     redactSUDIdentifiers: false, // Disclosed under explicit patient authorization
@@ -867,42 +867,42 @@ export const INITIAL_PATIENTS: PatientRecord[] = [
 
 export const INITIAL_INVENTORY: InventoryCompoundLot[] = [
   {
-    lotNumber: 'GMP-PSI-2026-04A',
-    compound: 'Synthetic Psilocybin (GMP API)',
-    gmpManufacturer: 'Usona Institute / Cerilliant High-Purity Labs',
+    lotNumber: 'OPS-PSI-2026-04A',
+    compound: 'Cultivated Psilocybin (Standardized Whole Mushroom Extract)',
+    gmpManufacturer: 'Oregon Licensed Producer #M109-PR-042 (Tested by Kenevir Research)',
     batchPurityPercent: 99.82,
     totalQuantityMg: 5000,
     remainingQuantityMg: 3875,
     expiryDate: '2028-12-31',
     storageTempCelsius: -20.4,
-    deaScheduleTier: 'Schedule I (Clinical Research Exemption #CR-882)',
+    deaScheduleTier: 'Oregon OPS / Colorado NMHA Licensed Framework',
     chainOfCustodyLedger: [
       {
         timestamp: '2026-08-15 09:14:00',
-        actor: 'Dr. Julian Mercer (Vault Custodian)',
-        action: 'Lot Ingestion & Analytical Certificate Verification',
-        witnessName: 'Dr. Elena Vance',
+        actor: 'Sarah Chen, LCSW (Licensed Facilitator)',
+        action: 'State CTS Manifest Ingestion & Analytical Certificate Verification',
+        witnessName: 'Marcus Thorne, LPC',
         deltaMg: 5000,
       },
       {
         timestamp: '2026-08-18 08:30:12',
-        actor: 'Dr. Julian Mercer',
+        actor: 'Sarah Chen, LCSW',
         action: 'Dispensed 25mg for Patient AE-8812 Protocol',
-        witnessName: 'Sarah Chen, LCSW',
+        witnessName: 'Marcus Thorne, LPC',
         deltaMg: -25,
       },
       {
         timestamp: '2026-09-01 07:45:00',
-        actor: 'Dr. Elena Vance',
+        actor: 'Marcus Thorne, LPC',
         action: 'Dispensed 25mg for Patient AE-9941 (Aurora)',
-        witnessName: 'Marcus Thorne, LPC',
+        witnessName: 'Sarah Chen, LCSW',
         deltaMg: -25,
       }
     ]
   },
   {
-    lotNumber: 'GMP-MDMA-2026-09C',
-    compound: 'MDMA Hydrochloride (GMP Pharmaceutical Grade)',
+    lotNumber: 'IND-MDMA-2026-09C',
+    compound: 'MDMA Hydrochloride (FDA IND Investigational Protocol)',
     gmpManufacturer: 'Lycos Therapeutics / Dalton Pharma Services',
     batchPurityPercent: 99.91,
     totalQuantityMg: 10000,

@@ -70,11 +70,11 @@ export interface Part2ConsentRule {
   cryptographicSignature: string;
 }
 
-// --- DEA CONTROLLED SUBSTANCE PERPETUAL VAULT ---
+// --- DEA & STATE REGULATED SUBSTANCE PERPETUAL VAULT ---
 export interface DEAVaultRecord {
   lotNumber: string;
   compound: string;
-  deaSchedule: 'Schedule I' | 'Schedule II' | 'Schedule III';
+  deaSchedule: 'Schedule I' | 'Schedule II' | 'Schedule III' | 'Oregon OPS Licensed' | 'Colorado NMHA';
   form222TrackingNumber: string;
   physicalVaultBalanceMg: number;
   electronicOrderBalanceMg: number;

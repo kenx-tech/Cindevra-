@@ -73,12 +73,12 @@ export const LayerNav: React.FC = () => {
               key={layer.id}
               id={`nav-layer-${layer.id}`}
               onClick={() => setActiveLayer(layer.id)}
-              className={`flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-left transition-all relative ${
+              className={`flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-left transition-all relative focus-visible:ring-2 focus-visible:ring-[#A8C69F] ${
                 isActive
                   ? isLiveJourney
-                    ? 'bg-[#1A261F] border border-[#A8C69F]/60 text-[#E8EDEA] shadow-md shadow-[#A8C69F]/10'
-                    : 'bg-[#151D17] border border-[#A8C69F]/40 text-[#E8EDEA] shadow'
-                  : 'text-[#E8EDEA]/60 hover:text-[#E8EDEA] hover:bg-[#141B16]/60 border border-transparent'
+                    ? 'bg-[#1A261F] border border-[#A8C69F] text-[#E8EDEA] shadow-md shadow-[#A8C69F]/10'
+                    : 'bg-[#151D17] border border-[#A8C69F]/60 text-[#E8EDEA] shadow'
+                  : 'text-[#E8EDEA]/75 hover:text-[#E8EDEA] hover:bg-[#141B16] border border-transparent'
               }`}
             >
               <div className={`p-1.5 rounded-lg ${
@@ -86,7 +86,7 @@ export const LayerNav: React.FC = () => {
                   ? isLiveJourney 
                     ? 'bg-[#A8C69F] text-[#0A0D0B]' 
                     : 'bg-[#A8C69F]/20 text-[#A8C69F]'
-                  : 'bg-[#141B16] text-[#E8EDEA]/40'
+                  : 'bg-[#141B16] text-[#A8C69F]/80'
               }`}>
                 <Icon className="w-4 h-4" />
               </div>
@@ -97,7 +97,7 @@ export const LayerNav: React.FC = () => {
                     <span className="w-2 h-2 rounded-full bg-[#A8C69F] animate-pulse"></span>
                   )}
                 </div>
-                <div className="text-[10px] text-[#E8EDEA]/50 font-mono">
+                <div className="text-[11px] text-[#E8EDEA]/70 font-mono">
                   {layer.sub}
                 </div>
               </div>
